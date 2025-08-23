@@ -2,7 +2,7 @@ name: Trigger Jenkins Job
 
 on:
   workflow_dispatch:
-    
+
 jobs:
   trigger:
     name: Build
