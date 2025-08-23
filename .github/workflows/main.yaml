@@ -5,13 +5,13 @@ on:
 
 jobs:
   trigger:
-    name: Build
     runs-on: ubuntu-latest
     steps:
       - name: Trigger Jenkins Job
         uses: appleboy/jenkins-action@master
         with:
-          url: ${{ secrets.URL }}
-          user: ${{ secrets.USER }}
-          token: ${{ secrets.TOKEN }}
-          job: ${{ secrets.JOBS }}
+          url: ${{ secrets.URL }}        # e.g., http://3.133.232.71:8080
+          user: ${{ secrets.USER }}      # e.g., kyawzinIT99
+          token: ${{ secrets.TOKEN }}    # your Jenkins API token
+          job: ${{ secrets.JOBS }}       # 'sign-project'
+          insecure: true                 # use if your Jenkins is http, not https
